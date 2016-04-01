@@ -28,6 +28,17 @@ node_modules
 
 # Optional npm cache directory
 .npm
+bower_components
 
 # Optional REPL history
 .node_repl_history
+
+# Users Environment Variables
+.lock-wscript
+
+# Compiled files
+public/css/*
+public/js/*
+
+assets/fonts
+assets/images
