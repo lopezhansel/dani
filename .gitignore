@@ -40,5 +40,5 @@ bower_components
 public/css/*
 public/js/*
 
-assets/fonts
-assets/images
+public/fonts
+public/img
