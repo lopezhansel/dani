@@ -1,17 +1,19 @@
+@import 'variables';
+
 .about { 
   p{
-      font-family: gotham-med, 'Open Sans', Arial, sans-serif;
+    font-family: gotham-med, 'Open Sans', Arial, sans-serif;
   }
   
   .hero-pic{
-    background-image: url("/img/1620420_10154653329940364_8599412246515571684_n.jpg");
+    background-image: url("@{images}/1620420_10154653329940364_8599412246515571684_n.jpg");
     background-size: cover;
     background-position: 20.8% 50.03%;
     height: 50vh;
+    position: relative;
     width: 100%;
     color: white;
     text-align: center;
-    position: relative;
 
     .title{
       font-family: futura, 'Open Sans', Arial, sans-serif;
@@ -28,13 +30,13 @@
   }
 
   .heading-3 {
-      font-size: 30px;
-      width: 50%;
-      text-decoration: underline ;
-      /*border-bottom: solid red 3px;*/
-      margin-bottom: 10.2px;
-      padding-bottom: 5px;
-    color: #0c222d;
+    font-size: 30px;
+    width: 50%;
+    text-decoration: underline ;
+    /*border-bottom: solid red 3px;*/
+    margin-bottom: 10.2px;
+    padding-bottom: 5px;
+    color: @deepBlue;
     font-weight: bold;
   }
   .container{
