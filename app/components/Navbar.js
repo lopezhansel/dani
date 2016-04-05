@@ -2,7 +2,6 @@ import React from 'react';
 import {Link} from 'react-router';
 
 class Navbar extends React.Component {
-
   render() {
     return (
       <div className=" top-bar">
@@ -14,7 +13,9 @@ class Navbar extends React.Component {
           </div>
           <div className="top-bar-right">
             <ul className="menu">
-              <li ><a href="#about">About</a></li>
+              <li >
+              <Link to={'/about'}>About</Link>
+              </li>
               <li ><a href="#work">Work</a></li>
               <li ><a href="#contact">Contact</a></li>
             </ul>

@@ -3,12 +3,12 @@ import React from 'react';
 class Home extends React.Component {
   render() {
     return (
-      <div id="about" class="about">
-        <div class="hero-pic">
-          <div class="overlay"></div>
-          <div class="title-wrap">
-            <p class="title"> About</p>
-            <div class="btn">
+      <div id="about" className="about">
+        <div className="hero-pic">
+          <div className="overlay"></div>
+          <div className="title-wrap">
+            <p className="title"> About</p>
+            <div className="btn">
               <svg> <rect x="0" y="0" fill="none" width="166" height="45" /> </svg>
               <a href="#about">Curiculumn ></a>
             </div>
@@ -16,12 +16,12 @@ class Home extends React.Component {
         </div>
         
         
-        <div class="container">
-          <div class="section">
-            <div class="heading-3">Objectivos</div>
+        <div className="container">
+          <div className="section">
+            <div className="heading-3">Objectivos</div>
             <p>Desarrollarme integralmente en una organicacion donde pueda obtener nuevos conocimientos y habilidades para alcancar las metas y objetivos personales y de la empresa. Me interesa trabajar en el area de administracion para superarme y desarrollar mis conocimientos en esa area ya que es de mucho interesa para mi.</p>
             <p>El area de diseno es otra area en donde me gustaria trabajar y que el hecho de planificar y buscar la mejor forma de solucionar un proyecto basandose en las necesidades del usuario sin dejar a un lado el concepto es muy interesante y formar parte de eso seria muy agradable..</p>
-            <div class="heading-3">Formacion Academica</div>
+            <div className="heading-3">Formacion Academica</div>
             <p>
               <p>2006 - 2007 illerato cn C is 2 cnico en nform tica</p>
               <p>2007 - 2008 elvidere High School elvidere llinois.</p>
@@ -32,7 +32,7 @@ class Home extends React.Component {
               <p>2013 Certificado en odesk 3Ds Max 2013 </p>
               <p>20 Certificado en Photoshop CS6  </p>
             </p>
-            <div class="heading-3">Experiencia</div>
+            <div className="heading-3">Experiencia</div>
             <p>Abril 2008 - oviembre 200 | barista
               eetleLixius | nillo Perif rico San er nimo
               uve la oportunidad de crecer como pers ona aprend a s er mas res pons able a
@@ -53,7 +53,7 @@ class Home extends React.Component {
               autori adas por construir o por regulari ar lectura de es crituras trato con
               el ciudadano s oluci n de problemas revisi n de proyectos y reali aci n de
             preventivas e instructivos atenci n al ciudadano.</p>
-            <div class="heading-3">Calificaciones</div>
+            <div className="heading-3">Calificaciones</div>
             <p>inistrativas manejo de cuentas excel y facturas. </p>
             <p>Dominio de un 80% del idioma ngles al hablarlo entenderlo leerlo y escribirlo. </p>
             <p>rabajo en Equipo </p>
