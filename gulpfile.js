@@ -16,7 +16,7 @@ var sourcemaps = require('gulp-sourcemaps');
 
 var production = process.env.NODE_ENV === 'production';
 
-var dependencies = ['alt', 'react', 'react-dom', 'react-router', 'underscore'];
+var dependencies = ['alt', 'react', 'react-dom', 'react-router', 'underscore','react-addons-css-transition-group'];
 
 gulp.task('vendor', function() {
   return gulp.src([

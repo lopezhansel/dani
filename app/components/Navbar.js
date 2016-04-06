@@ -8,7 +8,8 @@ class Navbar extends React.Component {
         <div className="wrapper">
           <div className="top-bar-left">
             <ul className="menu">
-              <li >Life + Beauty + Design</li>
+              <li ></li>
+              <Link to={'/'}><li>Life + Beauty + Design</li></Link>
             </ul>
           </div>
           <div className="top-bar-right">

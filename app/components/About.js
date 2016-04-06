@@ -22,7 +22,7 @@ class Home extends React.Component {
             <p>Desarrollarme integralmente en una organicacion donde pueda obtener nuevos conocimientos y habilidades para alcancar las metas y objetivos personales y de la empresa. Me interesa trabajar en el area de administracion para superarme y desarrollar mis conocimientos en esa area ya que es de mucho interesa para mi.</p>
             <p>El area de diseno es otra area en donde me gustaria trabajar y que el hecho de planificar y buscar la mejor forma de solucionar un proyecto basandose en las necesidades del usuario sin dejar a un lado el concepto es muy interesante y formar parte de eso seria muy agradable..</p>
             <div className="heading-3">Formacion Academica</div>
-            <p>
+            <div>
               <p>2006 - 2007 illerato cn C is 2 cnico en nform tica</p>
               <p>2007 - 2008 elvidere High School elvidere llinois.</p>
               <p>2008 - 2000 illerato cn C is 2 cnico en nform tica</p>
@@ -31,7 +31,7 @@ class Home extends React.Component {
               <p>2012 - Presente utodesk Revit chitecture 20  </p>
               <p>2013 Certificado en odesk 3Ds Max 2013 </p>
               <p>20 Certificado en Photoshop CS6  </p>
-            </p>
+            </div>
             <div className="heading-3">Experiencia</div>
             <p>Abril 2008 - oviembre 200 | barista
               eetleLixius | nillo Perif rico San er nimo
