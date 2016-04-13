@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router';
-
+import Logo from './Logo';
 class Navbar extends React.Component {
   render() {
     return (
@@ -9,7 +9,9 @@ class Navbar extends React.Component {
           <div className="top-bar-left">
             <ul className="menu">
               <li ></li>
-              <Link to={'/'}><li>Life + Beauty + Design</li></Link>
+              <Link to={'/'}>
+                <Logo ></Logo>
+              </Link>
             </ul>
           </div>
           <div className="top-bar-right">
