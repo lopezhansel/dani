@@ -4,32 +4,28 @@ import {Link} from 'react-router';
 class Logo extends React.Component {
   componentWillMount(){
     this.state = { 
-    	paths : null,
     	count : 0,
-    	types : ['async','async','async']
+    	types : ['async','oneByOne','delayed']
     };   
   }
   componentDidMount(){
-    this.state.svg = new Vivus('dani', {type: 'async', duration: 250}, (daniSvg)=>{
-      this.state.paths = daniSvg.map;
-      daniSvg.map.forEach((lines,index)=>{
-         if(this.state.paths[index].el.parentElement.id !== "flor" || (index===0)){
+    this.state.svg = new Vivus('dani', {type: 'async', duration: 250}, ()=>{
+      this.state.svg.map.forEach((lines,index)=>{
+         if(this.state.svg.map[index].el.parentElement.id !== "flor" || (index===0)){
            lines.el.setAttribute("fill",'#ffffff');
          }
       });
     }); 
-
-    setTimeout( (argument) => {
-    	this.state.paths.forEach(function (lines) {
-    		console.log(lines);
-    		lines.el.setAttribute("fill","none");
-    	});
-    	this.state.svg.play();
-    },8000);
   }
+  reanimate(){
+		this.state.svg.map.forEach(function (lines,innn) {
+			lines.el.setAttribute("fill","none");
+		});
+		this.state.svg.reset().play(1);
+  };
   render() {
     return (
-      <svg id="dani" version="1.0" xmlns="http://www.w3.org/2000/svg" width="730.000000pt" height="200.000000pt" viewBox="0 0 730.000000 200.000000" preserveAspectRatio="xMidYMid meet">
+      <svg onClick={this.reanimate.bind(this)} id="dani" version="1.0" xmlns="http://www.w3.org/2000/svg" width="730.000000pt" height="200.000000pt" viewBox="0 0 730.000000 200.000000" preserveAspectRatio="xMidYMid meet">
         <metadata>
         Created by Hansel Lopez
         </metadata>
