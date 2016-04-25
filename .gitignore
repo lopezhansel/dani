@@ -41,4 +41,6 @@ public/css/*
 public/js/*
 
 public/fonts
-public/img
+public/img/*
+!public/img/ABOUT-HERO.jpg
+!public/img/HOME-BG.jpg
