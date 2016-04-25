@@ -37,8 +37,8 @@ class Navbar extends Component {
             </Link>}
             <div className="right menu">
               <div className="inky"></div>
-              <Link onClick={this.onClick} className="ui item" to={'/'}>Home</Link>
-              <Link onClick={this.onClick} className="ui item active" to={'/about'}>About</Link>
+              <Link onClick={this.onClick} className="ui item active" to={'/'}>Home</Link>
+              <Link onClick={this.onClick} className="ui item" to={'/about'}>About</Link>
               <a onClick={this.onClick} className="ui item">Work</a>
               <a onClick={this.onClick} className="ui item">Contact</a>
             </div>
