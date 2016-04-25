@@ -9,8 +9,8 @@ class App extends React.Component {
       <div>
         <Navbar history={this.props.history} />
 	    	<Trans  transitionAppear={true} 
-	    		transitionName={{enter: 'animated', enterActive: 'fadeIn', leave: 'animated', leaveActive: 'none', appear: 'animated', appearActive: 'pulse'}}
-	    		transitionEnterTimeout={1000} transitionLeaveTimeout={1} transitionAppearTimeout={1000} >
+	    		transitionName={{enter: 'animated', enterActive: 'halFadeIn', leave: 'animated', leaveActive: 'fadeOut', appear: 'animated', appearActive: 'pulse'}}
+	    		transitionEnterTimeout={1000} transitionLeaveTimeout={100} transitionAppearTimeout={1000} >
 		        {React.cloneElement(this.props.children, {
 	            key: this.props.location.pathname
 	          })}

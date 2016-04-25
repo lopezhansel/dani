@@ -20,10 +20,14 @@ class Navbar extends Component {
     let newActiveItem = ev.currentTarget;
     let {$inky,$rightMenu,$oldActiveItem} = this;
     
-    $oldActiveItem.removeClass('active');
+    $oldActiveItem.removeClass('active navFlip');
     $inky.css({ display: 'block' }).after(a=> $inky.css({ left: newActiveItem.offsetLeft, width: newActiveItem.clientWidth }));
     setTimeout(letTransitionFinish => {
+      
       this.$oldActiveItem = $rightMenu.find(newActiveItem).addClass('active');
+      if (!(this.$oldActiveItem[0].id === 'logo')){
+        this.$oldActiveItem.addClass('navFlip');
+      }
       $inky.css({ display: 'none' });
     }, 300);
   }

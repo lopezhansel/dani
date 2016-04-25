@@ -27,8 +27,8 @@ body {
     // background: linear-gradient(to right, rgba(0,135,149,0.4) 0%,rgba(0,57,93,0.4) 100%);
     // background-color: fade(@deepBlue, 40%);
     z-index: 1;
-    background: linear-gradient(90deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
-    opacity: 0.25;
+    // background: linear-gradient(90deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+    // opacity: 0.15;
 }
 
 .grayscale {
@@ -98,9 +98,9 @@ body {
   animation-name: pulse;
 }
 
-@-webkit-keyframes fadeIn {
+@-webkit-keyframes halfFadeIn {
   from {
-    opacity: 0;
+    opacity: .5;
   }
 
   to {
@@ -108,9 +108,9 @@ body {
   }
 }
 
-@keyframes fadeIn {
+@keyframes halFadeIn {
   from {
-    opacity: 0;
+    opacity: .5;
   }
 
   to {
@@ -118,9 +118,9 @@ body {
   }
 }
 
-.fadeIn {
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
+.halFadeIn {
+  -webkit-animation-name: halFadeIn;
+  animation-name: halFadeIn;
 }
 
 @keyframes bounce {
