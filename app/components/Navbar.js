@@ -2,6 +2,11 @@ import React,{Component} from 'react';
 import {Link} from 'react-router';
 import Logo from './Logo';
 
+const Hello = ()=>{
+  return (
+      <Link className="ui item active" to={'/hello'}>Hello</Link>
+    )
+}
 class Navbar extends Component {
   constructor(props) {
     super(props);
@@ -36,15 +41,34 @@ class Navbar extends Component {
       <nav id="navbar" className="ui ui  large secondary network menu inverted fixed">
         <div className="ui container">
           <div id="nav" className="ui large secondary network menu inverted fluid pointing">
-            {<Link id='logo' onClick={this.onClick} className="ui item" to={'/'}>
-              <Logo  ></Logo>
-            </Link>}
+            <div className="ui item" id='logo'onClick={this.onClick}><Logo  ></Logo></div>
             <div className="right menu">
               <div className="inky"></div>
-              <Link onClick={this.onClick} className="ui item active" to={'/'}>Home</Link>
-              <Link onClick={this.onClick} className="ui item" to={'/about'}>About</Link>
-              <a onClick={this.onClick} className="ui item">Work</a>
-              <a onClick={this.onClick} className="ui item">Contact</a>
+              
+                <Link className="ui item" onClick={this.onClick} to={'/'}>
+              <div>
+                  Home
+              </div>
+                </Link>
+              
+                <Link to={'/about'} className="ui item" onClick={this.onClick}>
+                  <div>
+                      About
+                  </div>
+                </Link>
+              
+                <a className="ui item" onClick={this.onClick}>
+              <div>
+                  Work
+              </div>
+                </a>
+              
+                <a className="ui item" onClick={this.onClick}>
+              <div>
+                  Contact
+              </div>
+                </a>
+              
             </div>
           </div>
         </div>
@@ -52,5 +76,4 @@ class Navbar extends Component {
     );
   }
 }
-
 export default Navbar;
