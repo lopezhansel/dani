@@ -32,7 +32,7 @@ class Navbar extends Component {
       <nav id="navbar" className="ui ui  large secondary network menu inverted fixed">
         <div className="ui container">
           <div id="nav" className="ui large secondary network menu inverted fluid pointing">
-            {<Link onClick={this.onClick} className="ui item" to={'/'}>
+            {<Link id='logo' onClick={this.onClick} className="ui item" to={'/'}>
               <Logo  ></Logo>
             </Link>}
             <div className="right menu">
