@@ -25,7 +25,7 @@ class Logo extends React.Component {
   };
   render() {
     return (
-      <svg onClick={this.reanimate.bind(this)} id="dani" version="1.0" xmlns="http://www.w3.org/2000/svg" width="730.000000pt" height="200.000000pt" viewBox="0 0 730.000000 200.000000" preserveAspectRatio="xMidYMid meet">
+      <svg onClick={this.reanimate.bind(this)} id="dani" version="1.0" xmlns="http://www.w3.org/2000/svg" width="300pt" height="37.5pt" viewBox="200 50 340 90" preserveAspectRatio="xMidYMid meet">
         <metadata>
         Created by Hansel Lopez
         </metadata>
