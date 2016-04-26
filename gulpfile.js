@@ -16,7 +16,6 @@ var source                = require('vinyl-source-stream');
 var uglify                = require('gulp-uglify');
 var watchify              = require('watchify');
 
-var production = process.env.NODE_ENV === 'production';
 
 gulp.task('concatJavascripts', function() {
   return gulp.src([
@@ -92,20 +91,20 @@ gulp.task('default', ['less', 'concatJavascripts', 'browserify-watch', 'watch'])
 gulp.task('build', ['less', 'concatJavascripts', 'browserify']);
 gulp.task('styles', ['less','watch']);
 
-// var wepbpackConfig        = require('./webpack.config');
+var wepbpackConfig        = require('./webpack.config');
 // var nodemon               = require('gulp-nodemon');
 // var markdown              = require('./config/markdownGulp');
-// var webpack               = require('webpack-stream');  
+var webpack               = require('webpack-stream');  
 // var browserSync           = require('browser-sync');
 // var babel                 = require('gulp-babel');
 
-// const paths = {
-//   jsSrc       : './src/js/**/*.js',
-//   jsBuildName : 'bundle.js',
-//   jsBuild     : './public//js',
-//   readme      : 'README.md',
-//   mdView      : './public/views/odReadme.html'
-// };
+const paths = {
+  jsSrc       : './app/**/*.js',
+  jsBuildName : 'bundle.js',
+  jsBuild     : './public/js',
+  readme      : 'README.md',
+  mdView      : './public/views/odReadme.html'
+};
 // gulp.task('browser-sync', ['nodemon'], () => {
 //   browserSync.init(null, {
 //         injectChanges: true,
@@ -132,16 +131,21 @@ gulp.task('styles', ['less','watch']);
 //     } 
 //   });
 // }); 
-// gulp.task('javascript',()=>{
-//     console.log("javascript")
-//     markdown(paths.readme, paths.mdView)
-//     browserSync.reload()
-//     return gulp.src(paths.jsSrc)
-//         .pipe(plumber())
-//         // .pipe(babel({presets: ['es2015'] })) // now transformed by webpack
-//         .pipe(webpack(wepbpackConfig))
-//         .pipe(gulp.dest(paths.jsBuild));
-// });
+gulp.task('javascript',()=>{
+    console.log("javascript")
+    // markdown(paths.readme, paths.mdView)
+    // browserSync.reload()
+    return gulp.src(paths.jsSrc)
+        .pipe(plumber())
+        // .pipe(babel({presets: ['es2015'] })) // now transformed by webpack
+          // .pipe(gulpif(true, uglify({ mangle: false })))
+        .pipe(webpack(wepbpackConfig))
+        .pipe(gulp.dest(paths.jsBuild));
+});
+gulp.task('watch-js', () => {
+  gulp.watch(paths.jsSrc, ['javascript']);
+  // gulp.watch(paths.readme, ['markdown']);
+});
 // gulp.task('markdown',()=>{
 //     console.log("markdown")
 //     markdown(paths.readme, paths.mdView)
